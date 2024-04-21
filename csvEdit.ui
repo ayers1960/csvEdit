@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.4" author="PygubuDesigner 0.39">
+  <project>
+    <settings>
+      <setting id="name">csvEdit</setting>
+      <setting id="description">csvEdit</setting>
+      <setting id="module_name">csvEdit</setting>
+      <setting id="template">application</setting>
+      <setting id="main_widget">toplevel1</setting>
+      <setting id="main_classname">csvEditClass</setting>
+      <setting id="main_menu">mainMenu</setting>
+      <setting id="output_dir" />
+      <setting id="output_dir2" />
+      <setting id="import_tkvariables">False</setting>
+      <setting id="use_ttk_styledefinition_file">False</setting>
+      <setting id="use_i18n">False</setting>
+      <setting id="all_ids_attributes">False</setting>
+      <setting id="generate_code_onsave">False</setting>
+      <setting id="use_window_centering_code">False</setting>
+      <setting id="ttk_style_definition_file" />
+    </settings>
+    <customwidgets />
+  </project>
+  <object class="tk.Toplevel" id="toplevel1">
+    <property name="geometry">640x480</property>
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <child>
+      <object class="ttk.Frame" id="frame1">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">0</property>
+        </layout>
+        <child>
+          <object class="ttk.Treeview" id="trvCSV" named="True">
+            <property name="selectmode">extended</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Menu" id="mainMenu" named="True">
+    <property name="cursor">based_arrow_down</property>
+    <property name="font">TkTextFont</property>
+    <property name="takefocus">true</property>
+    <property name="tearoff">true</property>
+    <property name="title" translatable="yes">File</property>
+    <child>
+      <object class="tk.Menuitem.Submenu" id="subMnuFile" named="True">
+        <property name="columnbreak">false</property>
+        <property name="font">TkDefaultFont</property>
+        <property name="hidemargin">false</property>
+        <property name="label" translatable="yes">File</property>
+        <property name="relief">flat</property>
+        <property name="tearoff">false</property>
+        <property name="underline">0</property>
+        <child>
+          <object class="tk.Menuitem.Command" id="mnuCmdNew" named="True">
+            <property name="command" type="command" cbtype="with_wid">clicked_mnuCmdNew</property>
+            <property name="compound">top</property>
+            <property name="font">TkDefaultFont</property>
+            <property name="label" translatable="yes">New</property>
+            <property name="underline">0</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="mnuCmdOpen" named="True">
+            <property name="accelerator">Ctrl-O</property>
+            <property name="command" type="command" cbtype="simple">clicked_mnuCmdOpen</property>
+            <property name="compound">top</property>
+            <property name="font">TkTextFont</property>
+            <property name="label" translatable="yes">Open</property>
+            <property name="underline">0</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Separator" id="separator1" />
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="mnuCmdSave" named="True">
+            <property name="columnbreak">false</property>
+            <property name="command" type="command" cbtype="simple">clicked_mnuCmdSave</property>
+            <property name="compound">top</property>
+            <property name="font">TkTextFont</property>
+            <property name="label" translatable="yes">Save</property>
+            <property name="underline">0</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="mnuCmdSaveAs" named="True">
+            <property name="accelerator">Shift Ctrl-S</property>
+            <property name="command" type="command" cbtype="with_wid">clicked_mnuCmdSaveAs</property>
+            <property name="font">TkHeadingFont</property>
+            <property name="label" translatable="yes">Save as ...</property>
+            <property name="underline">6</property>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Menuitem.Separator" id="separator2" />
+        </child>
+        <child>
+          <object class="tk.Menuitem.Command" id="mnuCmdExit" named="True">
+            <property name="accelerator">Ctrl-Q</property>
+            <property name="columnbreak">false</property>
+            <property name="command" type="command" cbtype="simple">clicked_mnuCmdQuit</property>
+            <property name="compound">bottom</property>
+            <property name="font">TkTextFont</property>
+            <property name="hidemargin">true</property>
+            <property name="label" translatable="yes">Quit</property>
+            <property name="underline">0</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Menuitem.Submenu" id="subMnuEdit" named="True">
+        <property name="compound">top</property>
+        <property name="cursor">arrow</property>
+        <property name="label" translatable="yes">Edit</property>
+        <property name="takefocus">false</property>
+        <property name="tearoff">false</property>
+        <property name="underline">0</property>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Menuitem.Submenu" id="subMnuHelp" named="True">
+        <property name="compound">bottom</property>
+        <property name="cursor">arrow</property>
+        <property name="label" translatable="yes">Help</property>
+        <property name="relief">flat</property>
+        <property name="specialmenu">apple</property>
+        <property name="state">normal</property>
+        <property name="takefocus">false</property>
+        <property name="tearoff">false</property>
+        <property name="underline">0</property>
+        <child>
+          <object class="tk.Menuitem.Command" id="subMnuAbout" named="True">
+            <property name="command" type="command" cbtype="simple">clicked_mnuCmdAbout</property>
+            <property name="compound">bottom</property>
+            <property name="font">TkTextFont</property>
+            <property name="hidemargin">true</property>
+            <property name="label" translatable="yes">About</property>
+            <property name="underline">0</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

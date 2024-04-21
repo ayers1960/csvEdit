@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.4" author="PygubuDesigner 0.39">
+  <project>
+    <settings>
+      <setting id="name">about</setting>
+      <setting id="description">about </setting>
+      <setting id="module_name">about</setting>
+      <setting id="template">application</setting>
+      <setting id="main_widget">toplevel1</setting>
+      <setting id="main_classname">aboutClass</setting>
+      <setting id="main_menu" />
+      <setting id="output_dir" />
+      <setting id="output_dir2" />
+      <setting id="import_tkvariables">False</setting>
+      <setting id="use_ttk_styledefinition_file">False</setting>
+      <setting id="use_i18n">False</setting>
+      <setting id="all_ids_attributes">False</setting>
+      <setting id="generate_code_onsave">False</setting>
+      <setting id="use_window_centering_code">False</setting>
+      <setting id="ttk_style_definition_file" />
+    </settings>
+    <customwidgets />
+  </project>
+  <object class="tk.Toplevel" id="toplevel1">
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <child>
+      <object class="ttk.Frame" id="frame1">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">0</property>
+        </layout>
+        <child>
+          <object class="ttk.Label" id="lblAbout" named="True">
+            <property name="anchor">n</property>
+            <property name="compound">top</property>
+            <property name="font">{=} 20 {}</property>
+            <property name="text" translatable="yes">Template ABOUT class 1.0</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">20</property>
+              <property name="pady">20</property>
+              <property name="row">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="btnQuit" named="True">
+            <property name="command" type="command" cbtype="simple">btnQuit_Clicked</property>
+            <property name="text" translatable="yes">Quit</property>
+            <layout manager="grid">
+              <property name="column">0</property>
+              <property name="padx">25</property>
+              <property name="pady">50</property>
+              <property name="row">1</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

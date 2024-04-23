@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.4" author="PygubuDesigner 0.39">
+  <project>
+    <settings>
+      <setting id="name">getTemp</setting>
+      <setting id="description">getTemp</setting>
+      <setting id="module_name">getTemp</setting>
+      <setting id="template">application</setting>
+      <setting id="main_widget">toplevel1</setting>
+      <setting id="main_classname">getTempClass</setting>
+      <setting id="main_menu" />
+      <setting id="output_dir" />
+      <setting id="output_dir2" />
+      <setting id="import_tkvariables">False</setting>
+      <setting id="use_ttk_styledefinition_file">False</setting>
+      <setting id="use_i18n">False</setting>
+      <setting id="all_ids_attributes">False</setting>
+      <setting id="generate_code_onsave">False</setting>
+      <setting id="use_window_centering_code">False</setting>
+      <setting id="ttk_style_definition_file" />
+    </settings>
+    <customwidgets />
+  </project>
+  <object class="tk.Toplevel" id="toplevel1">
+    <property name="geometry">640x480</property>
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <containerlayout manager="pack">
+      <property name="propagate">false</property>
+    </containerlayout>
+    <child>
+      <object class="ttk.Frame" id="frame1">
+        <property name="height">200</property>
+        <property name="width">200</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">both</property>
+          <property name="side">bottom</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="lblChannel_1" named="True">
+            <property name="compound">left</property>
+            <property name="cursor">arrow</property>
+            <property name="font">{=} 20 {}</property>
+            <property name="justify">left</property>
+            <property name="text" translatable="yes">Channel 1</property>
+            <layout manager="place">
+              <property name="anchor">s</property>
+              <property name="x">150</property>
+              <property name="y">100</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="lblChannel_4" named="True">
+            <property name="compound">left</property>
+            <property name="cursor">arrow</property>
+            <property name="font">{=} 20 {}</property>
+            <property name="justify">left</property>
+            <property name="relief">flat</property>
+            <property name="text" translatable="yes">Channel 4</property>
+            <layout manager="place">
+              <property name="anchor">s</property>
+              <property name="x">450</property>
+              <property name="y">100</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="lblCh1Value" named="True">
+            <property name="compound">top</property>
+            <property name="font">{=} 36 {}</property>
+            <property name="relief">raised</property>
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">0.000</property>
+            <property name="width">7</property>
+            <layout manager="place">
+              <property name="anchor">s</property>
+              <property name="x">150</property>
+              <property name="y">200</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="lblCh4Value" named="True">
+            <property name="compound">top</property>
+            <property name="font">{=} 36 {}</property>
+            <property name="relief">raised</property>
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">0.000</property>
+            <property name="width">7</property>
+            <layout manager="place">
+              <property name="anchor">s</property>
+              <property name="x">450</property>
+              <property name="y">200</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Button" id="btnGo" named="True">
+            <property name="command" type="command" cbtype="simple">btnGo_clicked</property>
+            <property name="default">normal</property>
+            <property name="state">normal</property>
+            <property name="style">Toolbutton</property>
+            <property name="takefocus">true</property>
+            <property name="text" translatable="yes">     GO      </property>
+            <layout manager="place">
+              <property name="anchor">center</property>
+              <property name="x">300</property>
+              <property name="y">300</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="lblDateTime" named="True">
+            <property name="cursor">arrow</property>
+            <property name="font">TkDefaultFont</property>
+            <property name="justify">left</property>
+            <property name="relief">flat</property>
+            <property name="text" translatable="yes">YYYY-MM-DD HH:MM:SS</property>
+            <layout manager="place">
+              <property name="anchor">center</property>
+              <property name="x">320</property>
+              <property name="y">25</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="lblPortStatus" named="True">
+            <property name="anchor">n</property>
+            <property name="font">{=} 14 {}</property>
+            <property name="state">normal</property>
+            <property name="takefocus">false</property>
+            <property name="text" translatable="yes">label2</property>
+            <layout manager="place">
+              <property name="anchor">center</property>
+              <property name="x">320</property>
+              <property name="y">450</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="tk.Label" id="lblGo" named="True">
+            <property name="anchor">n</property>
+            <property name="cursor">arrow</property>
+            <property name="font">{=} 24 {}</property>
+            <property name="relief">raised</property>
+            <property name="text" translatable="yes">GO</property>
+            <layout manager="place">
+              <property name="anchor">center</property>
+              <property name="height">50</property>
+              <property name="relheight">0.0</property>
+              <property name="relwidth">0.0</property>
+              <property name="width">150</property>
+              <property name="x">320</property>
+              <property name="y">300</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

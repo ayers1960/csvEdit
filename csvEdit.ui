@@ -22,13 +22,10 @@
     <customwidgets />
   </project>
   <object class="tk.Toplevel" id="toplevel1">
+    <property name="container">false</property>
     <property name="geometry">640x480</property>
-    <property name="height">200</property>
-    <property name="width">200</property>
     <child>
       <object class="ttk.Frame" id="frame1">
-        <property name="height">200</property>
-        <property name="width">200</property>
         <layout manager="grid">
           <property name="column">0</property>
           <property name="row">0</property>
